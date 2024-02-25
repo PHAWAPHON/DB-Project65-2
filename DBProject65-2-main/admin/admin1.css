@@ -1,0 +1,255 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(255, 255, 255);
+    font-family: "Inter", sans-serif;
+    font-size: .75em;
+}
+
+.nav ul {  /*แถบhead*/
+    list-style: none;  /*ตัดหัวข้อออก*/
+    background-color: rgb(226, 226, 226);
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.nav li {
+    font-size: 1.2em;
+    line-height: 40px;
+    text-align: left;
+}
+
+.nav a {   /* del underline */
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding-left: 15px;
+    border-bottom: 1px solid #888;
+    transition: .25s ease;
+}
+
+.nav a:hover {   /* change color */
+    color: rgb(96, 113, 228);
+    font-size: large;
+}
+
+.nav a:hover a {
+    color: #000;
+    box-shadow: 0 2px 0 0 currentColor;
+}
+
+/*.nav a.active {  /* เคอร์เซอร์เปลี่ยน */
+    /*background-color: #aaa;
+    color: #444;
+    cursor: default;
+}*/
+
+.nav li li {   /* liซ้อนli (ตัวแรกคือข้างนอก ตัวสองคือข้างใน) */
+    font-size: .8em;    /* จี้แล้วตัวหนังสือเล็กลง */
+}
+
+.about ul a {
+    color: rgb(94, 94, 94);
+}
+
+.about ul a:hover {
+    width: 120px;
+    background-color: rgb(96, 113, 228);
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+}
+
+.sale ul a:hover {
+    width: 120px;
+    background-color: rgb(96, 113, 228);
+    color: rgb(255, 255, 255);
+    font-size: 0.9rem;
+}
+
+/* ทำให้จอเล็กลง เพื่อรองรับโทรศัพท์ */
+/* ขนาดใหญ่หน้าตาอีกแบบขนาดเล็กหน้าตาอีกแบบ */
+@media screen and (min-width: 650px) {
+    .nav li {
+        width: 130px;
+        border-bottom: none;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.4em;
+        display: inline-block;
+        margin-right: -4px;
+    }
+    .nav a {
+        border-bottom: none;
+    }
+    .nav > ul > li {
+        text-align: center;
+    }
+    .nav > ul > li > a {
+        padding-left: 0;
+    }
+
+    /* sub menus */
+    .nav li ul {
+        position: absolute;
+        display: none;
+        width: inherit;
+    }
+
+    /* จี้แล้วมีกล่องเมนูขึ้นข้างล่าง */
+    .nav li:hover ul {
+        display: block;
+    }
+    .nav li ul li {
+        display: block;
+    }
+}
+/*----------------------รายการสินค้า---------------------*/
+.list table, th, td {
+    border: 2px solid rgb(255, 255, 255);
+    border-collapse: collapse;
+    
+}
+.list table {
+    box-align : center;
+}
+.list {
+    text-align: center;
+    align-items: center;
+}
+.list table thead {
+    background-color: #bebebe;
+}
+.list table tbody {
+    background-color: #eeeeee;
+}
+.total {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+/*----------------------การขาย---------------------*/
+.datasale {
+    text-align: center;
+    align-items: center;
+    margin-left: 35%;
+}
+.datasale table thead {
+    background-color: #bebebe;
+}
+.datasale table tbody {
+    background-color: #eeeeee;
+}
+.datasale table, th, td {
+    border: 2px solid rgb(255, 255, 255);
+    border-collapse: collapse;
+    padding: 10px;
+}
+.totalsale {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+/*-----------------------คำสั่งซื้อทั้งหมด--------------*/
+.tran {
+    text-align: center;
+    align-items: center;
+    margin-left: 30%;
+}
+.tran table thead {
+    background-color: #bebebe;
+}
+.tran table tbody {
+    background-color: #eeeeee;
+}
+.tr table, th, td {
+    border: 2px solid rgb(255, 255, 255);
+    border-collapse: collapse;
+    padding: 10px;
+}
+/*----------------รายละเอียดผู้ใช้---------------------*/
+.totaluser {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.datauser {
+    text-align: center;
+    align-items: center;
+    margin-left: 25%;
+}
+.datauser table thead {
+    background-color: #bebebe;
+}
+.datauser table tbody {
+    background-color: #eeeeee;
+}
+.datauser table, th, td {
+    border: 2px solid rgb(255, 255, 255);
+    border-collapse: collapse;
+    padding: 10px;
+}
+/*------------------จัดการสินค้า------------------*/
+.createpd {
+    margin-left: 85%;
+}
+/*------------------จัดการตัวสินค้า----------------*/ 
+/*readonly (ท้ายใน input) = อ่านอย่างเดียวห้ามแก้ไข หรือ type="hidden"*/
+.totalin {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.editpd table {
+    margin-left: 30%;
+}
+/*-------------------เพิ่มสินค้า-------------------*/
+.addpd {
+    background-color: rgb(170, 180, 245);
+    height: auto;
+}
+.addpd table {
+    height: min-content;
+    font-size: 18px;
+}
+.addpd ul {
+    margin-left: 35%;
+}
+.addpd ul table {
+    padding: 100px;
+}
+.addpd input {
+    height: 25px;
+    width: 250px;
+}
+/*-------------------เพิ่มหมวดหมู่สินค้า-------------------*/
+.catepd {
+    background-color: rgb(170, 180, 245);
+    height:auto;
+    align-items: center;
+}
+.catepd table {
+    height: min-content;
+    font-size: 18px;
+}
+.catepd ul {
+    margin-left: 30%;
+}
+.catepd ul table {
+    padding: 50px;
+}
+.catepd input {
+    height: 25px;
+    width: 250px;
+}
+.catepd a {
+    font-size: 18px;
+}
